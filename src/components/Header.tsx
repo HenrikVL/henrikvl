@@ -10,8 +10,8 @@ import {
   Title,
   Avatar,
 } from "@mantine/core";
+import { Link } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
-import { MantineLogo } from "@mantine/ds";
 
 const HEADER_HEIGHT = 60;
 
@@ -111,20 +111,19 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
-    <a
-      key={link.label}
-      href={link.link}
+    <Link
+      key={link.link}
+      to={link.link}
       className={cx(classes.link, {
         [classes.linkActive]: active === link.link,
       })}
       onClick={(event) => {
-        event.preventDefault();
         setActive(link.link);
         close();
       }}
     >
       {link.label}
-    </a>
+    </Link>
   ));
 
   return (
@@ -143,9 +142,9 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
             src="https://www.wiseline.no/wp-content/uploads/elementor/thumbs/henrik_profil-pvrv5o2cavgc8360occxqvi0k7m06aj3jpkzxzeocw.jpeg"
             alt="it's me"
           />
-          <Title order={3} className={classes.headerText}>
+{/*           <Title order={3} className={classes.headerText}>
             Henrik Viken Lied
-          </Title>
+          </Title> */}
         </Group>
         <Group spacing={5} className={classes.links}>
           {items}

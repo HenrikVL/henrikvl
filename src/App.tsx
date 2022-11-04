@@ -1,8 +1,8 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import { HeaderResponsive } from "./components/Header";
-import { AppShell, MantineProvider } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
+import AppShell from "./components/AppShell";
 
 const links = {
   links: [
@@ -33,12 +33,7 @@ function App() {
         withGlobalStyles
         withNormalizeCSS
       >
-        <AppShell
-          fixed={true}
-          header={<HeaderResponsive links={links.links} />}
-        >
-          content
-        </AppShell>
+        <AppShell></AppShell>
       </MantineProvider>
     </div>
   );
