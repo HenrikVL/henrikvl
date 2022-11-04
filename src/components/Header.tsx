@@ -7,17 +7,34 @@ import {
   Burger,
   Paper,
   Transition,
-  Title,
   Avatar,
+  MANTINE_SIZES,
+  keyframes,
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
+import { ColorSchemeToggle } from "./ColorSchemeToggle";
 
-const HEADER_HEIGHT = 60;
+const HEADER_HEIGHT = 80;
+
+/* export const pulse = keyframes({
+  "0%": {
+    transform: "scale(0.95)",
+    boxShadow: "0 0 0 0 rgba(52, 172, 224, 0)",
+  },
+  "70%": {
+    transform: "scale(1)",
+    boxShadow: "0 0 0 10px rgba(52, 172, 224, 0)",
+  },
+  "100%": {
+    transform: "scale(0.95)",
+    boxShadow: "0 0 0 0 rgba(52, 172, 224, 0)",
+  },
+}); */
 
 const useStyles = createStyles((theme) => ({
   root: {
-    position: "relative",
+    position: "fixed",
     zIndex: 1,
   },
 
@@ -42,6 +59,8 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     height: "100%",
+    // set max width equal to container width
+    maxWidth: "720px",
   },
 
   headerText: {
@@ -73,7 +92,7 @@ const useStyles = createStyles((theme) => ({
       theme.colorScheme === "dark"
         ? theme.colors.dark[0]
         : theme.colors.gray[7],
-    fontSize: theme.fontSizes.sm,
+    fontSize: theme.fontSizes.lg,
     fontWeight: 500,
 
     "&:hover": {
@@ -99,6 +118,10 @@ const useStyles = createStyles((theme) => ({
         .color,
     },
   },
+  /*   avatar: {
+    // add keyframes
+    animation: `${pulse} 2s infinite`,
+  }, */
 }));
 
 interface HeaderResponsiveProps {
@@ -107,7 +130,7 @@ interface HeaderResponsiveProps {
 
 export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
+  const [active, setActive] = useState("/");
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
@@ -127,35 +150,43 @@ export function HeaderResponsive({ links }: HeaderResponsiveProps) {
   ));
 
   return (
-    <Header
-      height={HEADER_HEIGHT}
-      p={"md"}
-      mb={120}
-      className={classes.root}
-      fixed={true}
-    >
+    <Header height={HEADER_HEIGHT} p={"md"} mb={120} className={classes.root}>
       <Container className={classes.header}>
-        <Group position="left">
-          <Avatar
-            radius="xl"
-            size="md"
-            src="https://www.wiseline.no/wp-content/uploads/elementor/thumbs/henrik_profil-pvrv5o2cavgc8360occxqvi0k7m06aj3jpkzxzeocw.jpeg"
-            alt="it's me"
-          />
-{/*           <Title order={3} className={classes.headerText}>
-            Henrik Viken Lied
-          </Title> */}
-        </Group>
-        <Group spacing={5} className={classes.links}>
-          {items}
-        </Group>
-
         <Burger
           opened={opened}
           onClick={toggle}
           className={classes.burger}
           size="sm"
         />
+
+        <Group>
+          <Link
+            to="/"
+            onClick={(event) => {
+              setActive("/");
+              close();
+            }}
+          >
+            <Avatar
+              //className={classes.avatar}
+              radius="xl"
+              size="lg"
+              // add path to henrik_profile_close.jpeg
+              src={require("../images/henrik_profile_close.jpeg")}
+              alt="it's me"
+            />
+          </Link>
+
+          {/*           <Title order={3} className={classes.headerText}>
+            Henrik Viken Lied
+          </Title> */}
+        </Group>
+        <Group spacing={5} className={classes.links}>
+          {items}
+        </Group>
+        <Group>
+          <ColorSchemeToggle />
+        </Group>
 
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
           {(styles) => (

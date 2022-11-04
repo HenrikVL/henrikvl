@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { createStyles, Container } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Container } from "@mantine/core";
 
 const Blog = () => {
   return <Container size="lg">Blog!</Container>;

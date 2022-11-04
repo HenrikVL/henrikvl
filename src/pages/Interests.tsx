@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { createStyles, Container } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Container } from "@mantine/core";
 
 const Interests = () => {
   return <Container size="lg">Interests!</Container>;

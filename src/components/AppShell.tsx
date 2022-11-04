@@ -2,9 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import { AppShell as MantineAppShell } from "@mantine/core";
 import { HeaderResponsive } from "./Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "../pages/About";
-import Projects from "../pages/Projects";
+import { BrowserRouter } from "react-router-dom";
 import Router from "../routes/Router";
 
 const links = {
