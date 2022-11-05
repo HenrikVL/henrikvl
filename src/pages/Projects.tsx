@@ -18,18 +18,6 @@ const Projects = () => {
       <Space h="xl" />
       <SimpleGrid cols={1}>
         <ProjectCard
-          title="Apiir"
-          description={projectDescriptions["apiir"]}
-          fromColorGrad="#E5FF88"
-          toColorGrad="#A7A7A7"
-          icon={<IconBike size={32} />}
-          badges={[
-            { text: "Flutter", color: "blue" },
-            { text: "Firebase", color: "orange" },
-          ]}
-          linkTo={"https://www.apiir.tech/"}
-        />
-        <ProjectCard
           title="Wiseline"
           description={projectDescriptions["wiseline"]}
           fromColorGrad="#264873"
@@ -41,6 +29,18 @@ const Projects = () => {
             { text: "Django", color: "red" },
           ]}
           linkTo={"https://www.wiseline.no/"}
+        />
+        <ProjectCard
+          title="Apiir"
+          description={projectDescriptions["apiir"]}
+          fromColorGrad="#E5FF88"
+          toColorGrad="#A7A7A7"
+          icon={<IconBike size={32} />}
+          badges={[
+            { text: "Flutter", color: "blue" },
+            { text: "Firebase", color: "orange" },
+          ]}
+          linkTo={"https://www.apiir.tech/"}
         />
         <ProjectCard
           title="NTNUI"

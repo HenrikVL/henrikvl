@@ -8,8 +8,7 @@ const About = () => {
       <Title className={classes.title}>About</Title>
       <Space h="lg" />
       <Text className={classes.text}>
-        I'm a developer, climber and tech enthusiast from Norway. Currently I am
-        studying Informatics at NTNU and working on a project with{" "}
+        I'm a developer from Norway studying Informatics at NTNU. Currently I'm working on a project with{" "}
         <Text variant="link" component="a" href="https://www.wiseline.no/">
           Wiseline
         </Text>{" "}
