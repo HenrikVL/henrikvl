@@ -1,9 +1,6 @@
 import {
   createStyles,
-  Group,
-  Space,
   Paper,
-  SimpleGrid,
   Text,
   ThemeIcon,
   Badge,

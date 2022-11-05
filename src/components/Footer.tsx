@@ -5,14 +5,7 @@ import {
   ActionIcon,
   Text,
 } from "@mantine/core";
-import {
-  IconBrandTwitter,
-  IconBrandYoutube,
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandGithub,
-} from "@tabler/icons";
-import { MantineLogo } from "@mantine/ds";
+import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   footer: {

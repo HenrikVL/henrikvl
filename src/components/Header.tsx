@@ -8,8 +8,6 @@ import {
   Paper,
   Transition,
   Avatar,
-  MANTINE_SIZES,
-  keyframes,
 } from "@mantine/core";
 import { Link } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";

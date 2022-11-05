@@ -1,4 +1,4 @@
-import { Container, Title, Text, Space, SimpleGrid } from "@mantine/core";
+import { Container, Title, Space, SimpleGrid } from "@mantine/core";
 import { IconBike, IconBolt, IconFiles } from "@tabler/icons";
 import { ProjectCard } from "../components/ProjectCard";
 import DefaultStyles from "../Styles";
