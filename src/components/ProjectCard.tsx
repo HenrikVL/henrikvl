@@ -7,6 +7,7 @@ import {
   Text,
   ThemeIcon,
   Badge,
+  Flex,
 } from "@mantine/core";
 import { ReactNode } from "react";
 
@@ -25,8 +26,10 @@ const useStyles = createStyles(
       alignItems: "center",
       cursor: "pointer",
       overflow: "hidden",
+
       transition: "transform 150ms ease, box-shadow 100ms ease",
       padding: theme.spacing.lg,
+
       paddingLeft: theme.spacing.lg * 2,
 
       "&:hover": {
@@ -80,36 +83,58 @@ export function ProjectCard({
       component="a"
       href={linkTo}
     >
-      <ThemeIcon
-        size={48}
-        radius="md"
-        variant="gradient"
-        gradient={{ deg: 0, from: fromColorGrad, to: toColorGrad }}
+      <Flex
+        direction={{ base: "column", sm: "row" }}
+        gap={{ base: "sm", sm: "lg" }}
+        justify={{ sm: "center" }}
       >
-        {icon}
-      </ThemeIcon>
-      <Space w="sm" />
-      <SimpleGrid cols={1} spacing={0}>
-        <Group>
-          <Text size="lg" weight={500} align="left">
-            {title}
-          </Text>
-          {badges.map((badge) => (
-            <Badge
-              key={badge.text}
-              color={badge.color}
-              size="sm"
-              variant="light"
-            >
-              {badge.text}
-            </Badge>
-          ))}
-        </Group>
+        <ThemeIcon
+          size={48}
+          radius="md"
+          variant="gradient"
+          gradient={{ deg: 0, from: fromColorGrad, to: toColorGrad }}
+        >
+          {icon}
+        </ThemeIcon>
 
-        <Text size="sm" color="dimmed" align="left" lineClamp={1}>
-          {description}
-        </Text>
-      </SimpleGrid>
+        <Flex direction="column" gap={{ base: "sm", sm: 0 }}>
+          <Flex
+            wrap="nowrap"
+            //gap="sm"
+            justify="flex-start"
+            align={{ base: "flex-start", sm: "center" }}
+            //direction="row"
+            direction={{ base: "column", sm: "row" }}
+            gap={{ base: "sm", sm: "lg" }}
+          >
+            <Text size="lg" weight={500} align="left">
+              {title}
+            </Text>
+            <Flex
+              wrap={{ base: "wrap", sm: "nowrap" }}
+              gap="sm"
+              justify="flex-start"
+              align="center"
+              direction="row"
+            >
+              {badges.map((badge) => (
+                <Badge
+                  key={badge.text}
+                  color={badge.color}
+                  size="sm"
+                  variant="light"
+                >
+                  {badge.text}
+                </Badge>
+              ))}
+            </Flex>
+          </Flex>
+
+          <Text size="sm" color="dimmed" align="left" lineClamp={0}>
+            {description}
+          </Text>
+        </Flex>
+      </Flex>
     </Paper>
   );
 }

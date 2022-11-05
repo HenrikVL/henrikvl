@@ -7,11 +7,9 @@ const Projects = () => {
   const { classes } = DefaultStyles();
 
   const projectDescriptions = {
-    apiir: "Bike fitting application. Built with Flutter and Firebase.",
-    wiseline:
-      "A web application for power grid maintenance companies. Built with React, Typescript and Django.",
-    ntnui:
-      "Admission form application for the student organization NTNUI. Built with React, Typescript, Node.js and MongoDB.",
+    apiir: "Bike fitting application. ",
+    wiseline: "A web application for power grid maintenance companies.",
+    ntnui: "Admission form application for the student organization NTNUI.",
   };
 
   return (
