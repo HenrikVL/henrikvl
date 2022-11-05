@@ -1,7 +1,6 @@
-import React from "react";
-import logo from "./logo.svg";
 import { AppShell as MantineAppShell } from "@mantine/core";
 import { HeaderResponsive } from "./Header";
+import { Footer } from "./Footer";
 import { BrowserRouter } from "react-router-dom";
 import Router from "../routes/Router";
 
@@ -29,7 +28,10 @@ const links = {
 const AppShell = () => {
   return (
     <BrowserRouter>
-      <MantineAppShell header={<HeaderResponsive links={links.links} />}>
+      <MantineAppShell
+        header={<HeaderResponsive links={links.links} />}
+        footer={<Footer />}
+      >
         <Router />
       </MantineAppShell>
     </BrowserRouter>
