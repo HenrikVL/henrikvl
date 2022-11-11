@@ -15,12 +15,12 @@ const links = {
       label: "📈 Projects",
     },
     {
-      link: "/interests",
-      label: "🧗‍♂️ Interests",
+      link: "/timeline",
+      label: "⏳ Timeline",
     },
     {
-      link: "/blog",
-      label: "✍️ Blog",
+      link: "/interests",
+      label: "🧗‍♂️ Interests",
     },
   ],
 };

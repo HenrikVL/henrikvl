@@ -4,6 +4,7 @@ import Blog from "../pages/Blog";
 import Interests from "../pages/Interests";
 import Introduction from "../pages/Introduction";
 import Projects from "../pages/Projects";
+import Timeline from "../pages/Timeline";
 
 const Router = () => (
   <Routes>
@@ -11,6 +12,7 @@ const Router = () => (
     <Route path="/about" element={<About />} />
     <Route path="/projects" element={<Projects />} />
     <Route path="/interests" element={<Interests />} />
+    <Route path="/timeline" element={<Timeline />} />
     <Route path="/Blog" element={<Blog />} />
   </Routes>
 );

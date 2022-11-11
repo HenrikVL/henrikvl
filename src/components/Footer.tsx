@@ -47,7 +47,7 @@ export function Footer() {
             variant="light"
             size="lg"
             component="a"
-            href="https://www.linkedin.com/in/henrik-v-a789a7133/"
+            href="https://www.linkedin.com/in/henrikvl"
           >
             <IconBrandLinkedin size={24} stroke={1.5} />
           </ActionIcon>
