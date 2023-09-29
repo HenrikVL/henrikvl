@@ -5,10 +5,11 @@ const About = () => {
   const { classes } = DefaultStyles();
   return (
     <Container m="auto" size={"sm"} p={"md"}>
-      <Title className={classes.title}>About</Title>
+      <Title className={classes.title}> Hi, I'm Henrik 👋</Title>
       <Space h="lg" />
       <Text className={classes.text}>
-        I'm a developer from Norway studying Informatics at NTNU. Currently I'm working on a project with{" "}
+        I'm a student studying a Master in Informatics at NTNU. Currently I'm
+        working on a project with{" "}
         <Text variant="link" component="a" href="https://www.wiseline.no/">
           Wiseline
         </Text>{" "}
@@ -25,7 +26,7 @@ const About = () => {
       </Text>
       <Space h="sm" />
       <Text className={classes.text}>
-        Aside from work I spend most of my time climbing, watching TV shows and
+        Aside from work I spend most of my time climbing, staying active and
         hanging out with friends.
       </Text>
     </Container>

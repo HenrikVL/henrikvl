@@ -42,7 +42,7 @@ const TimelineGraph = () => {
           bullet={<IconSchool size={14} />}
         >
           <Text color="dimmed" size="sm">
-            Began Bachelor in Informatics at NTNU
+            Started Bachelor in Informatics at NTNU
           </Text>
           <Text size="xs" mt={4}>
             Fall 2019
@@ -96,12 +96,13 @@ const TimelineGraph = () => {
 
         <Timeline.Item
           active
+          lineActive
           title="Wiseline"
           bulletSize={24}
           bullet={<IconBolt size={14} />}
         >
           <Text color="dimmed" size="sm">
-            Began working at Wiseline
+            Began working in Wiseline
           </Text>
           <Text size="xs" mt={4}>
             Fall 2022
@@ -109,30 +110,47 @@ const TimelineGraph = () => {
         </Timeline.Item>
 
         <Timeline.Item
+          active
+          lineActive
           title="Travel"
-          lineVariant="dashed"
           bulletSize={24}
           bullet={<IconPlaneDeparture size={14} />}
         >
           <Text color="dimmed" size="sm">
-            Planned backpacking in Asia and Australia
+            Backpacking through Southeast Asia and Australia
           </Text>
           <Text size="xs" mt={4}>
-            Spring 2023
+            Spring 2023 (4. March - 31. May)
           </Text>
         </Timeline.Item>
 
         <Timeline.Item
-          title="NTNU - Master start"
+          active
           lineVariant="dashed"
+          title="NTNU - Master start"
           bulletSize={24}
           bullet={<IconSchool size={14} />}
         >
           <Text color="dimmed" size="sm">
-            Planned to begin Master in Informatics
+            Started Master in infromatics - Interaction design, gaming and
+            learning technology
           </Text>
           <Text size="xs" mt={4}>
             Fall 2023
+          </Text>
+        </Timeline.Item>
+
+        <Timeline.Item
+          title="NTNU - Master end"
+          bulletSize={24}
+          bullet={<IconSchool size={14} />}
+        >
+          <Text color="dimmed" size="sm">
+            Planned end of Master in infromatics - Interaction design, gaming
+            and learning technology
+          </Text>
+          <Text size="xs" mt={4}>
+            Spring 2025
           </Text>
         </Timeline.Item>
       </Timeline>

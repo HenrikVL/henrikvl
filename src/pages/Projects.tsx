@@ -27,6 +27,7 @@ const Projects = () => {
             { text: "React", color: "cyan" },
             { text: "Typescript", color: "yellow" },
             { text: "Django", color: "red" },
+            { text: "Figma", color: "pink" },
           ]}
           linkTo={"https://www.wiseline.no/"}
         />
@@ -39,6 +40,7 @@ const Projects = () => {
           badges={[
             { text: "Flutter", color: "blue" },
             { text: "Firebase", color: "orange" },
+            { text: "Figma", color: "pink" },
           ]}
           linkTo={"https://www.apiir.tech/"}
         />
@@ -53,6 +55,7 @@ const Projects = () => {
             { text: "Typescript", color: "yellow" },
             { text: "Express.js", color: "gray" },
             { text: "MongoDB", color: "teal" },
+            { text: "Figma", color: "pink" },
           ]}
           linkTo={"https://github.com/NTNUI/opptak"}
         />
