@@ -5,7 +5,7 @@ const About = () => {
   const { classes } = DefaultStyles();
   return (
     <Container m="auto" size={"sm"} p={"md"}>
-      <Title className={classes.title}> Hi, I'm Henrik 👋</Title>
+      <Title className={classes.title}> About me 🙋‍♂️</Title>
       <Space h="lg" />
       <Text className={classes.text}>
         I'm a student studying a Master in Informatics at NTNU. Currently I'm
