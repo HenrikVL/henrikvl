@@ -5,6 +5,7 @@ import Interests from "../pages/Interests";
 import Introduction from "../pages/Introduction";
 import Projects from "../pages/Projects";
 import Timeline from "../pages/Timeline";
+import Phishing from "../pages/Phishing";
 
 const Router = () => (
   <Routes>
@@ -13,7 +14,8 @@ const Router = () => (
     <Route path="/projects" element={<Projects />} />
     <Route path="/interests" element={<Interests />} />
     <Route path="/timeline" element={<Timeline />} />
-    <Route path="/Blog" element={<Blog />} />
+    <Route path="/blog" element={<Blog />} />
+    <Route path="/phishing" element={<Phishing />} />
   </Routes>
 );
 

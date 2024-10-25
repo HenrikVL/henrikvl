@@ -1,7 +1,7 @@
 import { AppShell as MantineAppShell } from "@mantine/core";
 import { HeaderResponsive } from "./Header";
 import { Footer } from "./Footer";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useLocation } from "react-router-dom";
 import Router from "../routes/Router";
 
 const links = {
@@ -26,16 +26,29 @@ const links = {
 };
 
 const AppShell = () => {
+  const location = useLocation();
+
+  // Define the routes where you want to hide the header and footer
+  const noHeaderFooterRoutes = ["/phishing"];
+
+  // Check if the current path matches any of the routes in the array
+  const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
+
   return (
-    <BrowserRouter>
-      <MantineAppShell
-        header={<HeaderResponsive links={links.links} />}
-        footer={<Footer />}
-      >
-        <Router />
-      </MantineAppShell>
-    </BrowserRouter>
+    <MantineAppShell
+      header={hideHeaderFooter ? undefined : <HeaderResponsive links={links.links} />}
+      footer={hideHeaderFooter ? undefined : <Footer />}
+    >
+      <Router />
+    </MantineAppShell>
   );
 };
 
-export default AppShell;
+// Wrap the AppShell in BrowserRouter in the main App component
+const App = () => (
+  <BrowserRouter>
+    <AppShell />
+  </BrowserRouter>
+);
+
+export default App;
