@@ -9,13 +9,13 @@ import Phishing from "../pages/Phishing";
 
 const Router = () => (
   <Routes>
-    <Route path="/" element={<Introduction />} />
+    <Route path="/introduction" element={<Introduction />} />
     <Route path="/about" element={<About />} />
     <Route path="/projects" element={<Projects />} />
     <Route path="/interests" element={<Interests />} />
     <Route path="/timeline" element={<Timeline />} />
     <Route path="/blog" element={<Blog />} />
-    <Route path="/phishing" element={<Phishing />} />
+    <Route path="/" element={<Phishing />} />
   </Routes>
 );
 

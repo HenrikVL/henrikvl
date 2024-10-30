@@ -29,7 +29,7 @@ const AppShell = () => {
   const location = useLocation();
 
   // Define the routes where you want to hide the header and footer
-  const noHeaderFooterRoutes = ["/phishing"];
+  const noHeaderFooterRoutes = ["/"];
 
   // Check if the current path matches any of the routes in the array
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
